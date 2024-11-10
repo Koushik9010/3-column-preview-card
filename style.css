@@ -44,7 +44,7 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 10px 0;
+  padding: 100px 0;
 }
 
 .inner-wrapper .card {
@@ -135,26 +135,30 @@ body {
 /* Mobile styles */
 @media screen and (max-width: 480px) {
   .inner-wrapper {
-    width: 100%;
+    max-width: 100%;
+    width: 350px;
+    padding: 100px 0;
+    /* margin: 20px; */
+    
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
   .inner-wrapper .card {
-    width: 90%;
-    padding: 20px;
+    flex-basis: 50%;
   }
 
   .card h2 {
     font-size: 24px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: left;
   }
 
   .card p {
     font-size: var(--font-size);
+    line-height: 2;
     padding-bottom: 20px;
     text-align: left;
   }
@@ -162,6 +166,7 @@ body {
   .card a {
     padding: 10px 20px;
     font-size: 14px;
+    margin-bottom: 10px;
     border-radius: 20px;
     text-align: center;
   }
