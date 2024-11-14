@@ -33,6 +33,7 @@ body {
 .outer-wrapper {
   width: 100%;
   min-height: 100vh;
+  padding-right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +41,7 @@ body {
 
 .inner-wrapper {
   width: 900px;
-  max-width: calc(100% -25px);
+  max-width: calc(100% - 25px);
   display: flex;
   justify-content: center;
   text-align: center;
@@ -52,8 +53,14 @@ body {
   padding: 40px;
   justify-content: flex-start;
   align-items: center;
-  /* gap: 20px; */
   text-align: left;
+}
+
+.inner-wrapper .card img {
+  margin-bottom: 15px;
+  width: 60px;
+  height: auto;
+  border-radius: 8px;
 }
 
 .card h2 {
@@ -119,7 +126,7 @@ body {
 .card a:hover {
   background: transparent;
   color: white;
-  transition: all, 0.5s;
+  transition: all 0.5s;
 }
 
 .attribution {
@@ -132,7 +139,7 @@ body {
   color: var(--bright-orange);
 }
 
-/* Mobile styles */
+/* Mobile styles
 @media screen and (max-width: 480px) {
   .outer-wrapper {
     padding: 0, 10px;
@@ -150,6 +157,7 @@ body {
   .inner-wrapper .card {
     width: calc(100% - 20px);
     flex-basis: 50%;
+    margin-bottom: 20px;
   }
 
   .card h2 {
@@ -184,5 +192,45 @@ body {
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     border-top-right-radius: 0;
+  }
+} */
+
+@media screen and (max-width: 450px) {
+  .inner-wrapper {
+    flex-direction: column;
+  }
+  .card:nth-child(1) {
+    border-radius: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .card:nth-child(3) {
+    border-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 900px) {
+  .inner-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .card {
+    flex-basis: 50%;
+  }
+  .card:nth-child(1) {
+    border-radius: 0;
+    border-top-left-radius: 8px;
+  }
+  .cards:nth-child(2) {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .card:nth-child(3) {
+    border-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
 }
